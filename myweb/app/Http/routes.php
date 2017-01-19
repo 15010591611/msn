@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 搭建后台模版
+Route::get('/admin','AdminController@index');
+
+// 分类管理
+Route::controller('/admin/cate','CateController');
+
+// 品牌管理
+Route::controller('/admin/brand','BrandController');
+
+// 商品管理
+Route::controller('/admin/goods','GoodsController');
